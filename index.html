@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preset Shop - Stunning Photo Presets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #1e2a3b, #4e6e80);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    /* Product Section */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .product-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      font-size: 1.8rem;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+    .product-card p {
+      color: #777;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    .product-card .price {
+      font-size: 1.4rem;
+      color: #e74c3c;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    /* Call to Action Button */
+    .cta-btn {
+      display: inline-block;
+      background: #e74c3c;
+      color: #fff;
+      text-align: center;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: #c0392b;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      margin-top: 60px;
+      background: #ecf0f1;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .testimonials h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .testimonial-card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+    .testimonial-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .testimonial-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .product-card h3 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Preset Shop</h1>
+    <p>Transform Your Photos with Stunning Presets</p>
+  </header>
+
+  <div class="container">
+    <!-- Google AdSense Banner Ad -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-client="YOUR_AD_CLIENT_ID"
+        data-ad-slot="YOUR_AD_SLOT_ID"
+        data-ad-format="auto"></ins>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://saltyluxe.com/wp-content/uploads/2022/07/GO-PRO-4.jpg" alt="Preset 1">
+        <h3>Vibrant Colors Preset</h3>
+        <p>Bring out the bold and vibrant colors in your photos with this preset.</p>
+        <span class="price">free</span>
+        <a href="" class="cta-btn">Buy Now</a>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://images.squarespace-cdn.com/content/v1/5b676719697a98ab3d92e200/1596807024934-1NEPBERG87ALOYEB6ZBE/tropical_before_new4.jpg" alt="Preset 2">
+        <h3>Soft Portrait Preset</h3>
+        <p>A soft, warm preset that enhances your portrait shots beautifully.</p>
+        <span class="price">$18.00</span>
+        <a href="#" class="cta-btn">Buy Now</a>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://shop.grainandfern.com/cdn/shop/files/02.Rainydays.jpg?v=1717495931&width=1445" alt="Preset 3">
+        <h3>Moody Film Preset</h3>
+        <p>For those who love a vintage, moody look to their images.</p>
+        <span class="price">$20.00</span>
+        <a href="#" class="cta-btn">Buy Now</a>
+      </div>
+    </section>
+
+    <!-- Google AdSense Sidebar Ad -->
+    <div style="margin-top: 40px; text-align: center;">
+      <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-client="YOUR_AD_CLIENT_ID"
+        data-ad-slot="YOUR_AD_SLOT_ID"
+        data-ad-format="auto"></ins>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Customers Are Saying</h2>
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <p>"The Vibrant Colors Preset completely transformed my photos! Highly recommend."</p>
+        <h4>- Sarah D.</h4>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <p>"I love the Soft Portrait Preset! It gives my photos such a nice warm feel."</p>
+        <h4>- Mark T.</h4>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <p>"The Moody Film Preset is perfect for creating vintage-style photos. Amazing!"</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Preset Shop. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Google AdSense Script -->
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+</html>
