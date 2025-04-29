@@ -165,18 +165,150 @@
         font-size: 1.4rem;
       }
     }
+
+    .preset-header {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.preset-header::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150%;
+  height: 150%;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background: #e67e22;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #d35400;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 30px 15px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+}
+header {
+  position: relative;
+  background: linear-gradient(135deg, #1e2a3b, #4e6e80);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+header canvas#rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks through the rain */
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+ 
+#water {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2; /* behind everything */
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allow clicks through it */
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #0a0a0a; /* dark background looks nice with water */
+}
+ 
+ 
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 150, 255, 0.5) 0%, rgba(0, 150, 255, 0) 70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: scale(0);
+}
+ 
   </style>
+
+
+  </script>
   <!-- Google AdSense Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+
+  </script>
 </head>
 <body>
 
-  <header>
-    <h1>Preset Shop</h1>
-    <p>Transform Your Photos with Stunning Presets</p>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5611255688311597"
-     crossorigin="anonymous"></script>
+  <header class="preset-header">
+    <canvas id="rain"></canvas>
+    <div class="header-content">
+      <h1>Transform Your Photos</h1>
+      <p>Download Premium & Free Lightroom Presets Instantly</p>
+      <a href="javascript:void(0);" class="cta-btn" id="exploreBtn">Explore Presets</a>
+
+      <div id="splash"></div>
+    </div>
   </header>
+  
 
   <div class="container">
     <!-- Google AdSense Banner Ad -->
@@ -189,6 +321,7 @@
     </div>
 
     <!-- Products Section -->
+    <canvas id="water"></canvas>
     <section class="products">
       <!-- Product 1 -->
       <div class="product-card">
@@ -196,11 +329,37 @@
         <h3>Vibrant Colors Preset</h3>
         <p>Bring out the bold and vibrant colors in your photos with this preset.</p>
         <span class="price">free</span>
-        <a href="index.html" class="cta-btn">Buy Now</a>
+        <a href="next.html" class="cta-btn">Buy Now</a>
       </div>
+
+      <div class="product-card">
+        <img src="https://images.squarespace-cdn.com/content/v1/5b676719697a98ab3d92e200/1586794833486-HB8Y5YMTJHL927MNXI4S/tomas-havel-presets-before-after_11.jpg" alt="Preset 2">
+        <h3>free presets online</h3>
+        <p>A soft, warm preset that enhances your portrait shots beautifully.</p>
+        <span class="price">$0</span>
+        <a href="https://drive.google.com/file/d/0B0YBEUKWQgUkTFJwdDZDQms0czA/view?resourcekey=0-JOhbC63r9CLl9C2l5j8Z2Q" class="cta-btn">Buy Now</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://on1-wp.s3.amazonaws.com/wp-content/uploads/2023/10/16070606/4B_A-960x640.jpg" alt="Preset 2">
+        <h3>free presets online</h3>
+        <p>A soft, warm preset that enhances your portrait shots beautifully.</p>
+        <span class="price">$0</span>
+        <a href="https://drive.google.com/file/d/0B0YBEUKWQgUkTFJwdDZDQms0czA/view?resourcekey=0-JOhbC63r9CLl9C2l5j8Z2Q" class="cta-btn">Buy Now</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://macroviewpoint.com/wp-content/uploads/2024/05/lightroom-edits-and-presets-s.jpg" alt="Preset 2">
+        <h3>free presets online</h3>
+        <p>A soft, warm preset that enhances your portrait shots beautifully.</p>
+        <span class="price">$0</span>
+        <a href="https://drive.google.com/file/d/0B0YBEUKWQgUkTFJwdDZDQms0czA/view?resourcekey=0-JOhbC63r9CLl9C2l5j8Z2Q" class="cta-btn">Buy Now</a>
+      </div>
+
+
       <!-- Product 2 -->
       <div class="product-card">
-        <img src="https://images.squarespace-cdn.com/content/v1/5b676719697a98ab3d92e200/1596807024934-1NEPBERG87ALOYEB6ZBE/tropical_before_new4.jpg" alt="Preset 2">
+        <img src="https://images.squarespace-cdn.com/content/v1/5b676719697a98ab3d92e200/1583690829687-HG6KLZP6QEWJGZA34REO/tomas-havel-presets-before-after_5.jpg" alt="Preset 2">
         <h3>Soft Portrait Preset</h3>
         <p>A soft, warm preset that enhances your portrait shots beautifully.</p>
         <span class="price">$18.00</span>
@@ -255,5 +414,162 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
+<script>
+  window.onload = function() {
+    const canvas = document.getElementById('rain');
+    const ctx = canvas.getContext('2d');
+  
+    let width = window.innerWidth;
+    let height = document.querySelector('header').offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
+  
+    let raindrops = [];
+    for (let i = 0; i < 100; i++) {
+      raindrops.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        length: Math.random() * 15 + 10,
+        opacity: Math.random() * 0.5 + 0.2,
+        speed: Math.random() * 4 + 2
+      });
+    }
+  
+    let flashOpacity = 0;
+    let flashTimer = 0;
+  
+    function drawRain() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.strokeStyle = 'rgba(174,194,224,0.5)';
+      ctx.lineWidth = 1;
+      ctx.lineCap = 'round';
+  
+      for (let i = 0; i < raindrops.length; i++) {
+        let drop = raindrops[i];
+        ctx.beginPath();
+        ctx.moveTo(drop.x, drop.y);
+        ctx.lineTo(drop.x, drop.y + drop.length);
+        ctx.stroke();
+      }
+  
+      moveRain();
+  
+      // Thunder flash effect
+      if (flashOpacity > 0) {
+        ctx.fillStyle = `rgba(255, 255, 255, ${flashOpacity})`;
+        ctx.fillRect(0, 0, width, height);
+        flashOpacity -= 0.05; // Decrease flash opacity
+      } else if (flashTimer <= 0 && Math.random() < 0.005) {
+        flashOpacity = 0.8; // Flash intensity
+        flashTimer = Math.random() * 5000 + 2000; // Random time between flashes
+      }
+  
+      flashTimer -= 16; // decrease timer approx per frame (assuming ~60fps)
+    }
+  
+    function moveRain() {
+      for (let i = 0; i < raindrops.length; i++) {
+        let drop = raindrops[i];
+        drop.y += drop.speed;
+        if (drop.y > height) {
+          drop.y = -20;
+          drop.x = Math.random() * width;
+        }
+      }
+    }
+  
+    function animateRain() {
+      drawRain();
+      requestAnimationFrame(animateRain);
+    }
+  
+    animateRain();
+  
+    window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      height = document.querySelector('header').offsetHeight;
+      canvas.width = width;
+      canvas.height = height;
+    });
+  }
+
+
+  
+window.addEventListener('load', function() {
+  const waterCanvas = document.getElementById('water');
+  const waterCtx = waterCanvas.getContext('2d');
+
+  function resizeWaterCanvas() {
+    waterCanvas.width = window.innerWidth;
+    waterCanvas.height = window.innerHeight;
+  }
+
+  resizeWaterCanvas();
+  window.addEventListener('resize', resizeWaterCanvas);
+
+  let waveOffset = 0;
+
+  function drawWater() {
+    waterCtx.clearRect(0, 0, waterCanvas.width, waterCanvas.height);
+    waterCtx.fillStyle = '#001f3f'; // dark blue water
+    waterCtx.fillRect(0, 0, waterCanvas.width, waterCanvas.height);
+
+    waterCtx.beginPath();
+    let amplitude = 20; // height of the waves
+    let wavelength = 150; // width of each wave
+    let speed = 0.02; // speed of the flow
+
+    waterCtx.moveTo(0, waterCanvas.height / 2);
+
+    for (let x = 0; x < waterCanvas.width; x++) {
+      let y = Math.sin((x + waveOffset) * Math.PI * 2 / wavelength) * amplitude + waterCanvas.height / 2;
+      waterCtx.lineTo(x, y);
+    }
+
+    waterCtx.lineTo(waterCanvas.width, waterCanvas.height);
+    waterCtx.lineTo(0, waterCanvas.height);
+    waterCtx.closePath();
+
+    waterCtx.fillStyle = 'rgba(0, 119, 190, 0.5)'; // lighter blue waves
+    waterCtx.fill();
+
+    waveOffset += speed * 50;
+    requestAnimationFrame(drawWater);
+  }
+
+  drawWater();
+});
+ 
+ 
+document.getElementById('exploreBtn').addEventListener('click', function() {
+  const splash = document.getElementById('splash');
+  
+  // Start splash animation
+  splash.style.pointerEvents = 'auto';
+  splash.style.opacity = '1';
+  splash.style.transform = 'scale(3)'; // grow big
+
+  // After splash animation ends (0.7s), fade the splash and scroll to bottom
+  setTimeout(function() {
+    splash.style.opacity = '0'; // Fade the splash
+    splash.style.transform = 'scale(0)'; // Shrink the splash
+
+    // Scroll to the bottom after the splash fades out
+    setTimeout(function() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 500); // Wait for the splash fade (500ms)
+    
+  }, 700); // Wait for splash grow effect to finish
+});
+
+ 
+document.getElementById('exploreBtn').addEventListener('click', () => window.scrollTo(0, document.body.scrollHeight));
+
+
+
+  </script>
+  
+
 </body>
+
 </html>
